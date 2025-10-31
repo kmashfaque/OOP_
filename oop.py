@@ -1,10 +1,12 @@
 class Employee:
+
     def __init__(self, name, id, dept, salary, designation):
         self.name = name 
         self.id = id
         self.dept = dept
         self.salary = salary
         self.designation = designation
+
 
 sam = Employee("Sam", 12, "IT", 35000, "Executive")
 
