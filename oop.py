@@ -9,17 +9,16 @@ class Employee:
         self.user()
 
     def user(self):
+        user_input = input("""Welcome to chatbook. How would you like to proceed!!
+                           1. Enter 1 to sign Up
+                           2. Enter 2 to sign In""")
 
-        self.signup = print("Enter 1 to signUp")
-        self.signin = print("Enter 2 to signin")
-        self.callfunc()
-
-    def callfunc(self):
-        if self.signup == "1":
+        if user_input == "1":
             self.signUp()
 
-        if self.signin == "2":
+        if user_input == "2":
             self.signIn()
+
         
     def signUp(self):
         self.name = input("Enter your name: ")
