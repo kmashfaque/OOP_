@@ -7,6 +7,7 @@ class Employee:
         self.salary = ""
         self.designation = ""
         self.password = ""
+        self.loggedin = False
         self.user()
 
     def user(self):
@@ -22,19 +23,28 @@ class Employee:
 
         
     def signUp(self):
-        self.name = input("Enter your name: ")
-        self.password = input("Enter password: ")
-        self.dept = input("Enter your department: ")
+        name = input("Enter your name: ")
+        password = input("Enter password: ")
+        dept = input("Enter your department: ")
+        self.name = name 
+        self.password = password
+        self.dept = dept
+
         print("Signup successfully")
+        self.user()
 
     def signIn(self):
         if not self.name and not self.password:
             print("You need to signup first")
 
         else:
-            self.name = input("Enter you name: ")
-            self.password = input("Enter you password: ")
-            print("Sign in successfully.")
+            name = input("Enter you name: ")
+            password = input("Enter you password: ")
+            if self.name == name and self.password == password:
+                loggedin = True
+                print("Sign in successfully.")
+            else:
+                exit()
             
     
     
