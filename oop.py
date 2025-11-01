@@ -41,7 +41,7 @@ class Employee:
             name = input("Enter you name: ")
             password = input("Enter you password: ")
             if self.name == name and self.password == password:
-                loggedin = True
+                self.loggedin = True
                 print("Sign in successfully.")
             else:
                 print("Your creddential is incorrect!! Try Again")
