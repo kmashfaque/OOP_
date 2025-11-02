@@ -1,42 +1,53 @@
-# from typing import List
+# # from typing import List
 
-# def subsets(nums: List[int]) -> List[List[int]]:
-#     n = len(nums)
-#     ans, sol = [], []
+# # def subsets(nums: List[int]) -> List[List[int]]:
+# #     n = len(nums)
+# #     ans, sol = [], []
 
-#     def backtrack(i):
-#         if i == n:
-#             ans.append(sol[:])
-#             return
+# #     def backtrack(i):
+# #         if i == n:
+# #             ans.append(sol[:])
+# #             return
 
-#         # Don't pick nums[i]
-#         backtrack(i + 1)
+# #         # Don't pick nums[i]
+# #         backtrack(i + 1)
 
-#         # Pick nums[i]
-#         sol.append(nums[i])
-#         backtrack(i + 1)
-#         sol.pop()
+# #         # Pick nums[i]
+# #         sol.append(nums[i])
+# #         backtrack(i + 1)
+# #         sol.pop()
 
-#     backtrack(0)
-#     return ans
+# #     backtrack(0)
+# #     return ans
 
 
-# # Example usage:
-# nums = [1, 2]
-# result = subsets(nums)
-# print("All subsets:", result)
+# # # Example usage:
+# # nums = [1, 2]
+# # result = subsets(nums)
+# # print("All subsets:", result)
 
-arr = "abba"
-left = 0
-right = len(arr) - 1
+# arr = "abba"
+# left = 0
+# right = len(arr) - 1
 
-def palindrome_check(arr, left, right):
+# def palindrome_check(arr, left, right):
     
-    if left >= right:return True
+#     if left >= right:return True
 
-    if arr[left] != arr[right]:return False
+#     if arr[left] != arr[right]:return False
     
     
-    return palindrome_check(arr, left = left + 1, right = right - 1)
+#     return palindrome_check(arr, left = left + 1, right = right - 1)
 
-print(palindrome_check(arr, left, right))
+# print(palindrome_check(arr, left, right))
+
+
+from oop import Employee
+
+user1 = Employee()
+
+user1.name = "abeer"
+
+print(user1.get_user_name())
+user1.set_user_name("abir")
+print(user1.name)
