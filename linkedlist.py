@@ -42,6 +42,7 @@ ll.insertAtBeginning(20)
 ll.insertAtBeginning(30)
 ll.insertAtEnd(40)
 ll.insertAtEnd(50)
+ll.insertAtEnd(60)
 ll.print_linkedlist()
         
 
