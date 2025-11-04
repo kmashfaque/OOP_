@@ -2,7 +2,6 @@ def combination_size(nums, k):
     
     result = []
     new_arr = []
-    
     def combination(index):
         
         if len(new_arr) == k:
@@ -17,7 +16,7 @@ def combination_size(nums, k):
     combination(0)
     return result
 
-nums = [1,2,3,4]
+nums = [1,2,3]
 k = 2
 
 print(combination_size(nums, k))
