@@ -2,6 +2,7 @@ def combination_size(nums, k):
     
     result = []
     new_arr = []
+    
     def combination(index):
         
         if len(new_arr) == k:
