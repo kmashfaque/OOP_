@@ -13,11 +13,14 @@ def subset(nums):
             subset.pop() 
     backTrack(0)
 
+  
+
     return result
 
 # -------- TEST --------
 nums = [1, 2, 3]
 print(subset(nums))
+
 
 
 
