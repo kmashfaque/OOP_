@@ -1,5 +1,5 @@
 def subset_sum(nums):
-   
+  
     n = len(nums)   
     result = []
 
@@ -8,6 +8,7 @@ def subset_sum(nums):
         if index == n:
             result.append(current_sum)
             return
+ 
         backtrack(index + 1, current_sum)
 
         backtrack(index + 1, current_sum + nums[index])
