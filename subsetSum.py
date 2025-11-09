@@ -24,23 +24,41 @@
 
 
 
-def demo_recursion(level):
-    # Base case
-    if level == 3:
-        print(" " * level, f"Reached base case at level {level}")
+# def demo_recursion(level):
+#     # Base case
+#     if level == 3:
+#         print(" " * level, f"Reached base case at level {level}")
+#         return
+
+#     # Print when we enter this call
+#     print(" " * level, f"Entering level {level}")
+
+#     # First recursive call
+#     demo_recursion(level + 1)
+
+#     # Second recursive call
+#     demo_recursion(level + 1)
+
+#     # Print when we are returning (after both calls done)
+#     print(" " * level, f"Returning from level {level}")
+
+# # Start recursion
+# demo_recursion(0)
+
+
+def two_calls(level):
+    if level == 2:
+        print(" " * level, f"Base case at level {level}")
         return
 
-    # Print when we enter this call
-    print(" " * level, f"Entering level {level}")
+    print(" " * level, f"Entering level {level} (first call)")
+    two_calls(level + 1)
 
-    # First recursive call
-    demo_recursion(level + 1)
+    print(" " * level, f"Back to level {level} after FIRST call")
 
-    # Second recursive call
-    demo_recursion(level + 1)
+    print(" " * level, f"Entering level {level} (second call)")
+    two_calls(level + 1)
 
-    # Print when we are returning (after both calls done)
-    print(" " * level, f"Returning from level {level}")
+    print(" " * level, f"Back to level {level} after SECOND call")
 
-# Start recursion
-demo_recursion(0)
+two_calls(0)
