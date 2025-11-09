@@ -24,23 +24,22 @@ def permutation(arr):
     result = []
 
     def backtrack(index):
-        # print(f"ENTER index={index}, arr={arr}")
+        
 
         if index == len(arr):
-            # print(">>> BASE CASE, append", arr)
+            
             result.append(arr.copy())
             return
 
         for i in range(index, len(arr)):
-            # print(f"SWAP index={index} and i={i} -> {arr[index]} <-> {arr[i]}")
+            
             arr[index], arr[i] = arr[i], arr[index]
 
             backtrack(index + 1)
 
-            # print(f"UNDO SWAP index={index} and i={i} -> {arr[index]} <-> {arr[i]}")
             arr[index], arr[i] = arr[i], arr[index]
 
-        # print(f"EXIT index={index}, arr={arr}")
+        
 
     backtrack(0)
     return result
