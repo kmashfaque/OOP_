@@ -40,4 +40,9 @@ def crossover(parent1, parent2):
 
     return offspring1, offspring2
 
-
+def mutation(individual):
+   mutated_list = list(individual) 
+   for i in range(TAERGET_LEN):
+       if random.random() < MUTATION_RATE:
+           mutated_list[i] = random.choice(VALID_CHARS)
+   return "".join(mutated_list)
