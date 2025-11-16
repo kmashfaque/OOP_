@@ -32,3 +32,12 @@ def selection(population, fitnesses):
 
     return parent1, parent2
 
+def crossover(parent1, parent2):
+    split_point = random.randint(1, TAERGET_LEN - 1)
+
+    offspring1 = parent1[:split_point] + parent2[split_point:]
+    offspring2 = parent2[:split_point] + parent1[split_point:]
+
+    return offspring1, offspring2
+
+
