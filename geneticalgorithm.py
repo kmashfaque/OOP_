@@ -2,7 +2,7 @@ import random
 import string
 
 
-TARGET = "ABEERWEDSJEMI"
+TARGET = "BANGLADESH"
 POPULATION_SIZE = 200
 MUTATION_RATE = 0.02
 VALID_CHARS = string.ascii_uppercase + ' '
