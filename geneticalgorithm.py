@@ -2,7 +2,7 @@ import random
 import string
 
 
-TARGET = "GENETICS"
+TARGET = "ABEERWEDSJEMI"
 POPULATION_SIZE = 200
 MUTATION_RATE = 0.02
 VALID_CHARS = string.ascii_uppercase + ' '
@@ -27,9 +27,8 @@ def selection(population, fitnesses):
     
     probabilities = [f / total_fitness for f in fitnesses]
 
-    parent1 = random.choice(population, weights = probabilities, k=1)[0]
-    parent2 = random.choice(population, weights = probabilities, k=1)[0]
-
+    parent1 = random.choices(population, weights = probabilities, k=1)[0]
+    parent2 = random.choices(population, weights = probabilities, k=1)[0]
     return parent1, parent2
 
 def crossover(parent1, parent2):

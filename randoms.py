@@ -29,7 +29,7 @@ class LinkedList:
            return print("The value is Not in the list")
         curr = self.head
         while curr:
-            if curr.value == value:a
+            if curr.value == value:
                 print(f"found the value {value}")
                 return 
             curr = curr.next
